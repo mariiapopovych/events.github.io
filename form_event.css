@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Alexandria Bold';
+    src: url('./src/AA_Fonts/Alexandria-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alexandria Light';
+    src: url('./src/AA_Fonts/Alexandria-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alexandria Regular';
+    src: url('./src/AA_Fonts/Alexandria-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Concert One Regular';
+    src: url('./src/AA_Fonts/ConcertOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    font-family: 'Alexandria Bold', sans-serif;
+    color: #333;
+    background: linear-gradient(135deg,  #FF9517, #B3FAFF);
+}
+
+.header {
+    display: flex; 
+    align-items: center; 
+    width: 60%;
+    gap: 2rem; 
+    margin: 2rem auto;
+}
+
+.header img {
+    width: 100px;
+    height: auto; 
+
+}
+
+.header h1 {
+    font-size: 3rem; 
+    margin: 0; 
+    color: #333; 
+    justify-content: center;
+    
+}
+
+
+form {
+    width: 60%;
+    margin: 2rem auto;
+    height: auto;
+    background: #fffef8;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative; 
+}
+
+input {
+    height: 2.5rem;
+    width: 100%; 
+    max-width: 25rem; 
+    padding: 0.5rem 1rem; 
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button {
+    position: absolute; 
+    right: 2rem; 
+    bottom: 2rem; 
+    height: 3rem;
+    width: 50%;
+    max-width: 15rem; 
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #B3FAFF;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+label {
+    display: block;
+    margin: 1rem 0 0.5rem; 
+    font-size: 1rem;
+    color: #333;
+}

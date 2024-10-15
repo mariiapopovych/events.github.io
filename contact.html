@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        #contact-page {
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+  
+
+    </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+        <a href="index.html"><img src="./src/Bern/Logo/Logo + Wordmark2 Bern.png" alt="Bern Community Center Logo"></a>
+    </div>
+    <nav class="site-nav">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="classes.html">Classes & Events</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="">Get Involved</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+    <section id="contact-page">
+        <div>
+            <form method="post" action="" id="survey-form">
+                <fieldset class="first" >
+                  <label id="name-label" for="name">Name</label>
+                  <input id="name" type="text"  placeholder="Enter your name" >
+                  <label id="email-label" for="email">Email</label>
+                  <input id="email" type="email"  placeholder="Enter your email" >
+                  <label id="number-label" for="number">Tel</label>
+                  <input id="number" type="number" pattern="[0-9]{10,13}" min="1000000000" max="9999999999999" placeholder="Enter your number"  >
+
+                </fieldset>
+                <fieldset class="third">
+                  <legend>Would you recommend this Community to a friend?</legend>
+                  <label>
+                  <input type="radio" name="recommend" value="1" checked > Definitely </label>
+                  <label>
+                  <input type="radio" name="recommend" value="2"  > No way! </label>
+                  <label>
+                  <input type="radio" name="recommend" value="3"  > I don't know  </label>
+                </fieldset>
+                <fieldset class="fifth">
+                  <legend>Any comments or suggestions?</legend>
+                  <textarea id="textarea" type="textarea" rows="5" cols="50" placeholder="please write your text..."></textarea> 
+                </fieldset>
+                <button id="submit" type="submit">Submit</button>
+            </form>
+        </div>
+        <div>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2723.6937576576393!2d7.445799102053286!3d46.94805771572275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e39c3f40211ad%3A0x310922f47535abfb!2sUNESCO%20-%20Bern%20Old%20Town!5e0!3m2!1sen!2sch!4v1728996811908!5m2!1sen!2sch" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <script src="form.js"></script>
+</body>
+</html>
