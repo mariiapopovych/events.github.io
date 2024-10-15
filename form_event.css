@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Alexandria Bold';
+    src: url('./src/AA_Fonts/Alexandria-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alexandria Light';
+    src: url('./src/AA_Fonts/Alexandria-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alexandria Regular';
+    src: url('./src/AA_Fonts/Alexandria-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Concert One Regular';
+    src: url('./src/AA_Fonts/ConcertOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    font-family: 'Alexandria Regular', sans-serif;
+    color: #333;
+    background: linear-gradient(135deg,  #FF9517, #B3FAFF);
+}
+
+form{
+  
+    width: 60%;
+    align-self: center;
+    height: 80vh;
+    background:	#fffef8;
+    border-radius: 8px;
+    padding: 5rem;
+}
+
+img{
+    width: 100px;
+    height: auto;
+}
+
+input{
+    height: 2rem;
+    min-width: 20rem;
+    border: #333;
+
+}
