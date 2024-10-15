@@ -93,7 +93,7 @@ document.querySelectorAll('.read-more').forEach(button => {
 });
 
 function showfooter() {
-  alert("Hello");
-  let footer = document.getElementsByTagName("footer");
-  alert(footer);
+  console.log("firing");
+  let footer = document.getElementsByTagName("footer")[0];
+  footer.style.display = "block";
 }

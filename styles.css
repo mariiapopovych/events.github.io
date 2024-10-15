@@ -110,6 +110,16 @@ body {
     width: 100vw;
 }
 
+footer{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 50px;
+    background-color: red;
+    left: 0;
+    bottom: 0;
+}
+
 /* Upcoming Events */
 .upcoming-events {
     display: flex;
