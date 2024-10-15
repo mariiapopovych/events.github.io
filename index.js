@@ -94,12 +94,11 @@ document.querySelectorAll('.read-more').forEach(button => {
 
 
 function showfooter() {
-  console.log("firing");
   let footer = document.getElementsByTagName("footer")[0];
-  footer.style.display = "block";
-}
+  footer.classList.add("footerVisible");
+};
 
 function hidefooter(){
   let footer = document.getElementsByTagName("footer")[0];
-  footer.style.display = "none";
-}
+  footer.classList.remove("footerVisible");
+};

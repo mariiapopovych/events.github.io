@@ -106,18 +106,29 @@ body {
 }
 
 #footer-trigger{
-    height: 20px;
+    position: fixed;
+    height: 50px;
     width: 100vw;
+    bottom: 0;
 }
 
 footer{
-    display: none;
+    visibility: hidden;
     position: fixed;
     width: 100vw;
     height: 50px;
-    background-color: red;
-    left: 0;
+    background-color: #c4dcac;
+    bottom: -50px;
+    opacity: 0%;
+    padding-left: 40px;
+    transition: all 0.3s ease;
+}
+
+.footerVisible{
+    visibility: visible;
+    opacity: 100%;
     bottom: 0;
+    transition: bottom 0.3s ease;
 }
 
 /* Upcoming Events */
@@ -193,5 +204,15 @@ footer{
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes footerAppear {
+    form {
+        transform: translateY(-50px);
+    }
+
+    to {
+        transform: translateY(0);
     }
 }
