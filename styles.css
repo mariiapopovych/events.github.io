@@ -105,6 +105,11 @@ body {
     animation: slideUp 2s ease-in-out;
 }
 
+#footer-trigger{
+    height: 20px;
+    width: 100vw;
+}
+
 /* Upcoming Events */
 .upcoming-events {
     display: flex;

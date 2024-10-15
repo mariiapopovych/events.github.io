@@ -91,3 +91,9 @@ document.querySelectorAll('.read-more').forEach(button => {
     button.textContent = button.textContent === 'Read More' ? 'Read Less' : 'Read More';
   });
 });
+
+function showfooter() {
+  alert("Hello");
+  let footer = document.getElementsByTagName("footer");
+  alert(footer);
+}
