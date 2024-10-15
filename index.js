@@ -92,8 +92,14 @@ document.querySelectorAll('.read-more').forEach(button => {
   });
 });
 
+
 function showfooter() {
   console.log("firing");
   let footer = document.getElementsByTagName("footer")[0];
   footer.style.display = "block";
+}
+
+function hidefooter(){
+  let footer = document.getElementsByTagName("footer")[0];
+  footer.style.display = "none";
 }
