@@ -44,7 +44,7 @@ body {
     top:0;
     background-color: #FF9517;
     height: 100px; 
-    color: white;
+    color:  #fffef8;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -125,10 +125,40 @@ body {
     animation: slideUp 2s ease-in-out;
 }
 
+footerAnimation
+#footer-trigger{
+    position: fixed;
+    height: 50px;
+    width: 100vw;
+    bottom: 0;
+}
+
+footer{
+    visibility: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 50px;
+    background-color: #c4dcac;
+    bottom: -50px;
+    opacity: 0%;
+    padding-left: 40px;
+    transition: all 0.3s ease;
+}
+
+.footerVisible{
+    visibility: visible;
+    opacity: 100%;
+    bottom: 0;
+    transition: bottom 0.3s ease;
+}
+
+/* Upcoming Events */
+=======
 .subtitle {
     margin-bottom: 100px;
 }
 
+ main
 .upcoming-events {
     height: 50vh;
     display: flex;
@@ -203,5 +233,15 @@ body {
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes footerAppear {
+    form {
+        transform: translateY(-50px);
+    }
+
+    to {
+        transform: translateY(0);
     }
 }

@@ -101,3 +101,14 @@ document.querySelectorAll('.read-more').forEach(button => {
     button.textContent = button.textContent === 'Read More' ? 'Read Less' : 'Read More';
   });
 });
+
+
+function showfooter() {
+  let footer = document.getElementsByTagName("footer")[0];
+  footer.classList.add("footerVisible");
+};
+
+function hidefooter(){
+  let footer = document.getElementsByTagName("footer")[0];
+  footer.classList.remove("footerVisible");
+};
