@@ -28,8 +28,6 @@
 
 body {
     font-family: 'Alexandria Regular', sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #fffef8; 
     color: #333;
     height: 100vh;
@@ -61,6 +59,7 @@ body {
 .logo {
     width: 100px;
 }
+
 .logo img {
     height: 60px;
 }
@@ -68,19 +67,40 @@ body {
 .site-nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
 }
 
 .site-nav a {
     color: #fffef8;
     text-decoration: none;
     font-size: 1.1rem;
+    text-decoration: none;
+}
+
+@media (min-width: 769px) {
+
+    .site-nav a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        color: #fffef8;
+        text-decoration: none;
+        padding: 0 15px;
+    }
+
+    .site-nav .active {
+        background-color: #ff9f29;
+        font-weight: bold;
+    }
+
 }
 
 .site-nav .active {
     font-weight: bold;
-    text-decoration: underline;
 }
 
 .site-nav a:hover {
@@ -101,20 +121,21 @@ body {
 }
 
 .homepage {
-    background: 
-        linear-gradient(135deg, rgba(255, 149, 23, 0.8), rgba(179, 250, 255, 0.8)),
-        url('./src/hero3.jpg'); 
-    background-size: cover; 
-    background-position: center;
-    display: block;
-    height: calc(100vh - 100px);
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
     text-align: center;
-    /* background: linear-gradient(135deg, #FF9517, #B3FAFF);  */
+    min-height: calc(100vh - 100px);
+    height: auto; 
+}
+
+.welcome-message {
+    margin-bottom: 50px;
 }
 
 .welcome-message h1 {
     font-size: 2.5rem;
+    color:#fffef8;
     margin-bottom: 10px;
     animation: fadeIn 1.5s ease-in-out;
 }
@@ -122,10 +143,77 @@ body {
 .welcome-message p {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    color:#fffef8;
     animation: slideUp 2s ease-in-out;
 }
 
-footerAnimation
+.upcoming-events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.upcoming-events h2 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: #fffef8;
+}
+
+.event-list {
+    display: flex;
+    align-items: stretch;
+    gap: 20px; 
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.event-item {
+    width: calc(100% - 40px); 
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .event-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .event-item {
+        width: 100%;
+    }
+}
+
+.event-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .welcome-message h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-message p {
+        font-size: 1rem;
+    }
+
+    .event-item h3 {
+        font-size: 1.3rem;
+    }
+}
+
+
 #footer-trigger{
     position: fixed;
     height: 50px;
@@ -152,69 +240,7 @@ footer{
     transition: bottom 0.3s ease;
 }
 
-/* Upcoming Events */
-=======
-.subtitle {
-    margin-bottom: 100px;
-}
 
- main
-.upcoming-events {
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.upcoming-events h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.event-list {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    bottom: 20px;
-    display: flex;
-    align-items: stretch;
-    gap: 20px; 
-    list-style-type: none;
-    padding: 0;
-}
-
-.event-item {
-    width: calc(100% - 40px);
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(20px);
-    transition: all 0.5s ease-in-out;
-}
-
-.event-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-@media (max-width: 768px) {
-    .welcome-message h1 {
-        font-size: 2rem;
-    }
-
-    .welcome-message p {
-        font-size: 1rem;
-    }
-
-    .event-item h3 {
-        font-size: 1.3rem;
-    }
-}
 
 @keyframes fadeIn {
     from {
