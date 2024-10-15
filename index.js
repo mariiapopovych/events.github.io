@@ -88,7 +88,7 @@ events.forEach(event => {
       <p><strong>Schedule:</strong> ${event.schedule || 'N/A'}</p>
       <p><strong>Location:</strong> ${event.location || 'TBC'}</p>
       <p><strong>Max Participants:</strong> ${event.maxParticipants ? event.maxParticipants : 'Unlimited'}</p>
-      <button onclick="window.location.href='form-event.html'">Sign Up</button>
+      <button onclick="window.location.href='form_event.html'">Sign Up</button>
     </div>
   `;
   eventsGrid.appendChild(section);
