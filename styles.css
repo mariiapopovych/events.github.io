@@ -30,7 +30,7 @@ body {
     font-family: 'Alexandria Regular', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #fffef8; 
     color: #333;
 }
 
@@ -39,7 +39,8 @@ body {
 }
 
 .site-header {
-    background-color: #ffecb8;
+    background-color: #FF9517;
+    height: 100px; 
     color: white;
     padding: 1rem;
     display: flex;
@@ -47,6 +48,9 @@ body {
     align-items: center;
 }
 
+.logo {
+    width: 100px;
+}
 .logo img {
     height: 60px;
 }
@@ -54,13 +58,19 @@ body {
 .site-nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
 .site-nav a {
-    color: rgb(50, 50, 50);
+    color: #fffef8;
     text-decoration: none;
     font-size: 1.1rem;
+}
+
+.site-nav .active {
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .site-nav a:hover {
@@ -77,12 +87,11 @@ body {
 
 .homepage {
     display: block;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 100px);
     padding: 2rem;
     text-align: center;
-    background: linear-gradient(135deg, #6a8d92, #c4e0e5);
+    background: linear-gradient(135deg, #FF9517, #B3FAFF); 
 }
-
 
 .welcome-message h1 {
     font-size: 2.5rem;
@@ -96,10 +105,14 @@ body {
     animation: slideUp 2s ease-in-out;
 }
 
+/* Upcoming Events */
 .upcoming-events {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .upcoming-events h2 {
@@ -108,6 +121,7 @@ body {
 }
 
 .event-list {
+    bottom: 20px;
     display: flex;
     align-items: center;
     gap: 20px; 
@@ -115,13 +129,13 @@ body {
     padding: 0;
 }
 
+/* Event Item */
 .event-item {
     margin-bottom: 1.5rem;
     padding: 1rem;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* opacity: 0; */
     transform: translateY(20px);
     transition: all 0.5s ease-in-out;
 }
@@ -131,6 +145,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
+/* Responsive Styles for Homepage */
 @media (max-width: 768px) {
     .welcome-message h1 {
         font-size: 2rem;
@@ -145,6 +160,7 @@ body {
     }
 }
 
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
