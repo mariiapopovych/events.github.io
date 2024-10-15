@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events Grid</title>
+    <style>
+
+      *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        grid-gap: 20px;
+        padding: 10px;
+      }
+      section {
+        border: 1px solid #ccc;
+        padding: 10px;
+        background-color: #f9f9f9;
+        position: relative;
+      }
+      button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #1c6dc3;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0c396a;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Our available events to join</h2>
+
+    <main class="wrapper grid" id="eventsGrid"></main>
+
+    <script src="index.js"></script>
+
+  </body>
+</html>
