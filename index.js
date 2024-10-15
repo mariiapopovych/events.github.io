@@ -73,10 +73,21 @@ events.forEach(event => {
   section.innerHTML = `
     <h3>${event.title}</h3>
     <p>${event.description}</p>
-    <p><strong>Schedule:</strong> ${event.schedule || 'N/A'}</p>
-    <p><strong>Location:</strong> ${event.location || 'TBC'}</p>
-    <p><strong>Max Participants:</strong> ${event.maxParticipants ? event.maxParticipants : 'Unlimited'}</p>
-    <button>Sign Up</button>
+        <button class="read-more">Read More</button>
+    <div class="additional-info" style="display: none;">
+      <p><strong>Schedule:</strong> ${event.schedule || 'N/A'}</p>
+      <p><strong>Location:</strong> ${event.location || 'TBC'}</p>
+      <p><strong>Max Participants:</strong> ${event.maxParticipants ? event.maxParticipants : 'Unlimited'}</p>
+      <button>Sign Up</button>
+    </div>
   `;
   eventsGrid.appendChild(section);
+});
+
+document.querySelectorAll('.read-more').forEach(button => {
+  button.addEventListener('click', () => {
+    const additionalInfo = button.nextElementSibling;
+    additionalInfo.style.display = additionalInfo.style.display === 'none' ? 'block' : 'none';
+    button.textContent = button.textContent === 'Read More' ? 'Read Less' : 'Read More';
+  });
 });
