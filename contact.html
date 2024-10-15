@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <style>
+        #contact-page {
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <section id="contact-page">
+        <div>
+            <form method="post" action="" id="survey-form">
+                <fieldset class="first" >
+                  <label id="name-label" for="name">Name</label>
+                  <input id="name" type="text" required placeholder="Enter your name" >
+                  <label id="email-label" for="email">Email</label>
+                  <input id="email" type="email" required placeholder="Enter your email" >
+                  <label id="number-label" for="number">Tel</label>
+                  <input id="number" type="number" pattern="[0-9]{10,13}" min="1000000000" max="9999999999999" placeholder="Enter your number" required >
+                </fieldset>
+                <fieldset class="second">
+                  <legend>How oft can you cook ? </legend>
+                  <select id="dropdown" >
+                    <option value="">select one</option>
+                    <option value="1">everyday</option>
+                    <option value="2">sometimes</option>
+                    <option value="3">other</option>
+                  </select>
+                </fieldset>
+                <fieldset class="third">
+                  <legend>Would you recommend this recipe to a friend?</legend>
+                  <label>
+                  <input type="radio" name="recommend" value="1" checked > Definitely </label>
+                  <label>
+                  <input type="radio" name="recommend" value="2"  > No way! </label>
+                  <label>
+                  <input type="radio" name="recommend" value="3"  > I don't know  </label>
+                </fieldset>
+                <fieldset class="fourth">
+                  <legend>What would you like to see improved? (Check all that apply)</legend>
+                   <input type="checkbox" id="hair" name="hair" value="hair">
+                   <label for="hair"> ingredients</label>
+                   <input type="checkbox" id="money" name="money" value="money">
+                   <label for="money">  souce </label>
+                   <input type="checkbox" id="gut" name="gut" value="gut">
+                   <label for="gut">Way of cook</label>
+                </fieldset>
+                <fieldset class="fifth">
+                  <legend>Any comments or suggestions?</legend>
+                  <textarea id="textarea" type="textarea" rows="5" cols="50" placeholder="please write your text..."></textarea> 
+                </fieldset>
+                <button id="submit" type="submit">Submit</button>
+            </form>
+        </div>
+        <div>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2723.6937576576393!2d7.445799102053286!3d46.94805771572275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e39c3f40211ad%3A0x310922f47535abfb!2sUNESCO%20-%20Bern%20Old%20Town!5e0!3m2!1sen!2sch!4v1728996811908!5m2!1sen!2sch" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+</body>
+</html>
