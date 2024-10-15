@@ -33,7 +33,7 @@
 }
 
 body{
-    font-family: 'Alexandria Regular', sans-serif;
+    font-family: 'Alexandria Bold', sans-serif;
     color: #333;
     background: linear-gradient(135deg,  #FF9517, #B3FAFF);
 }
@@ -41,17 +41,19 @@ body{
 .header {
     display: flex; 
     align-items: center; 
-
-    gap: 1rem; 
+    width: 60%;
+    gap: 2rem; 
+    margin: 2rem auto;
 }
 
 .header img {
     width: 100px;
     height: auto; 
+
 }
 
 .header h1 {
-    font-size: 1.5rem; 
+    font-size: 3rem; 
     margin: 0; 
     color: #333; 
     justify-content: center;
@@ -66,7 +68,8 @@ form {
     background: #fffef8;
     border-radius: 8px;
     padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative; 
 }
 
 input {
@@ -79,14 +82,31 @@ input {
     font-size: 1rem;
     color: #333;
     background-color: #f9f9f9;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); 
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button {
+    position: absolute; 
+    right: 2rem; 
+    bottom: 2rem; 
+    height: 3rem;
+    width: 50%;
+    max-width: 15rem; 
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #B3FAFF;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus {
     outline: none;
     border-color: #007bff; 
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 label {
