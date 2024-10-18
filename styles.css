@@ -70,17 +70,17 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0px;
 }
 
 .site-nav a {
     color: #fffef8;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     text-decoration: none;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 767px) {
 
     .site-nav a {
         display: flex;
@@ -89,7 +89,7 @@ body {
         height: 100px;
         color: #fffef8;
         text-decoration: none;
-        padding: 0 15px;
+        padding: 0 6px;
     }
 
     .site-nav .active {
