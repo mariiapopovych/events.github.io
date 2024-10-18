@@ -1,7 +1,7 @@
 html, body {
     background: 
         linear-gradient(135deg, rgba(255, 149, 23, 0.8), rgba(179, 250, 255, 0.8)),
-        url('../src/hero3.jpg');
+        url('../images/hero3.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
