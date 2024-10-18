@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="stylesheet" href="styles.css">
+    
 
     <style>
       *, *::after, *::before {
         box-sizing: border-box;
       }
 
-      main{
-        width: 80%;
-        margin: auto;
+      body {
+        margin: 0;
+        background: linear-gradient(135deg,  #FF9517, #B3FAFF);
       }
+
         header {
           text-align: center;
-          margin-top: 30px;
           margin-bottom: 30px;
           
         }
@@ -28,14 +29,19 @@
         #AboutUs {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: space-evenly;
           align-items: center;
+          row-gap: 5rem;
+          width: 90%;
+          margin: auto;
         }
 
         .about-article {
           display: flex;
           gap: 3rem;
           align-items: center;
+          margin-top: 30px;
+          margin-bottom: 30px;
 
         }
 
@@ -43,43 +49,86 @@
           height: 400px;
           width: 400px;
         }
-
+        .dark-mode {
+          background-color: rgb(25, 25, 25) !important;
+          color: white;
+      }
+      
+      .dark-mode1 {
+          background-color: rgb(65, 65, 65) !important;
+          color: white;
+      }
+      
+      .dark-mode2 {
+          background-color: rgb(45, 37, 37) !important;
+          color: white;
+      }
+      
+      #darkMode {
+          width: 50px;
+          height: 30px;
+          border-radius: 15px;
+          border-style: none;
+          background-color: rgb(189, 188, 188);
+      }
+      
+      #darkMode .icon1 {
+          width: 20px;
+          height: 20px;
+          background-color: black;
+      
+          border-radius: 25px;
+      }
+      
+      #darkMode:active .icon1 {
+          background-color: white;
+      }
     </style>
 </head>
 <body>
-      <header class="site-header">
-    <div class="logo">
+      <header class="site-header darkM1">
+    <div class="logo" class="darkM1">
         <a href="index.html"><img src="./src/Bern/Logo/Logo + Wordmark2 Bern.png" alt="Bern Community Center Logo"></a>
     </div>
-    <nav class="site-nav">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
+    <nav class="site-nav " class="darkM1">
+        <ul class="darkM1">
+            <li><a href="index.html" class="active darkM1">Home</a></li>
             <li><a href="classes.html">Classes & Events</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="">Get Involved</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <button id="darkMode" onclick="colorModeToggler()" class="btn-toggle">
+      <nav class="icon1"></nav>
+    </button>
       </header>
-      <main>
-        <header  class="about-header" >
+      <main   class="darkM2">
+        <header  class="about-header" class="darkM1">
             <img class="header-img" src="https://www.bern.ch/themen/freizeit-und-sport/veranstaltungen/grosse-events/baerner-faschnacht/@@images/bc4759df-5df1-47c5-bb8b-1ddbf80e7f00.jpeg" alt="bern">
         </header>
-        <section id="AboutUs">
+        <section id="AboutUs" class="darkM1">
             <article class="about-article">
-                <img class="article-image" src="https://oakgroveky.org/wp-content/uploads/2023/08/Community-Center.png" alt="support">
-                <p class="article-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis consectetur eveniet aliquam doloremque quisquam, sed quaerat blanditiis. Voluptatibus debitis rerum officiis maxime modi iusto asperiores ducimus nobis a odit vero nulla et sit natus suscipit sunt ad eligendi nesciunt, dignissimos doloremque consectetur iure. Exercitationem, sunt? Laboriosam quis quas quasi fuga modi eveniet. Consequuntur blanditiis, a laudantium natus quae obcaecati ab voluptatibus corporis tempora reprehenderit beatae nemo iusto quisquam ex. Doloribus dolorum placeat quos accusantium! Dolorum laudantium eligendi consequatur odio impedit rerum numquam architecto explicabo iste veritatis, id consequuntur perspiciatis, voluptate est sunt dicta assumenda perferendis molestiae quo! Ipsa, dolore cum.</p>
+                <img class="article-image" src="https://www.cityofvancouver.us/wp-content/uploads/2024/03/east-concert-1024x580.jpg" alt="natur concert">
+                <p class="article-text">The Aur Natur Concert is a unique musical experience that celebrates the beauty of nature through harmonious compositions. This concert brings together natural sounds—like the rustling of leaves, birdsong, flowing water, and the hum of wind—with instrumental music to create an immersive atmosphere that evokes serenity and a deep connection to the environment <br><br>
+
+                 The performance is designed to not only entertain but also raise awareness about the importance of nature preservation. The concert features various artists who blend classical and contemporary styles, creating a tranquil and inspiring auditory journey. Each piece of music is crafted to reflect the different moods and elements of the natural world, inviting the audience to relax, reflect, and appreciate the world around them.</p>
             </article>
-             <article class="about-article">
-                <p class="article-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A quod illum recusandae eligendi, soluta voluptate expedita quibusdam. Nostrum optio aliquam asperiores porro, exercitationem ducimus saepe omnis a officiis expedita non. Nesciunt accusamus voluptate sit, quod veritatis doloremque dolorem est suscipit, eligendi consectetur iste temporibus eveniet repellendus nam vitae maxime numquam at voluptatum? Reiciendis nesciunt numquam placeat alias sit cum tempora nemo maxime ea dolore soluta perferendis dolores exercitationem et voluptatibus veritatis ducimus est unde vero accusamus nulla, impedit sequi! Qui odit nobis dolore sint repellat itaque deserunt fugiat doloribus quisquam quo, neque dolor iste aut totam asperiores sequi, officiis ex?</p>
-                <img class="article-image" src="https://oakgroveky.org/wp-content/uploads/2023/08/Community-Center.png" alt="">
+             <article class="about-article" class="darkM1">
+                <p class="article-text">Hiking is an outdoor activity that involves walking in natural environments, typically on trails or paths through forests, mountains, or other scenic landscapes. It’s an excellent way to connect with nature, offering a combination of physical exercise and mental relaxation. Hikes can vary in difficulty, from easy, leisurely walks to challenging treks up steep mountains, making it accessible to people of all fitness levels.<br><br>
+
+                  Beyond the physical benefits, such as improved cardiovascular health and muscle strength, hiking allows individuals to explore beautiful landscapes, experience wildlife, and enjoy peaceful solitude or shared moments with fellow hikers. It’s a popular activity for those seeking adventure, fresh air, and an escape from the busy pace of modern life.</p>
+                <img class="article-image" src="https://cdn.evbstatic.com/s3-build/fe/build/images/0b0a9c8e1b093fe621f93d17795b43ce-hiking.webp" alt="hiking event">
                 
             </article>
-            <article class="about-article">
-                <img class="article-image" src="https://oakgroveky.org/wp-content/uploads/2023/08/Community-Center.png" alt="colloberation">
-                <p class="article-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iusto explicabo excepturi ipsa ut ullam totam, aliquid aspernatur incidunt dolorum! Cupiditate perferendis unde hic assumenda. Laudantium maiores saepe labore hic dolorem natus nihil quasi? Obcaecati illo quibusdam fugiat, non at quisquam, necessitatibus nihil ullam veniam ex nulla dolorum animi rem! Eius saepe delectus blanditiis soluta neque facere. Cupiditate dicta consequatur blanditiis alias! Quam praesentium porro repellendus totam, perferendis unde magni quasi consequuntur officiis autem voluptatum eos sapiente distinctio minus optio omnis quo, iste asperiores consequatur sint? Nulla in maiores facilis, veniam laudantium omnis fugit. Eveniet dolor necessitatibus consequuntur voluptas unde!</p>
+            <article class="about-article" class="darkM1">
+                <img class="article-image" src="https://assets.teenvogue.com/photos/65f04cba135f536756238763/16:9/w_2560%2Cc_limit/GettyImages-1505754859%2520(1).jpg" alt="colloberation">
+                <p class="article-text">Solidarity is the unity and mutual support among individuals or groups who share common interests, challenges, or goals. It represents a commitment to stand together, especially in difficult times, to advocate for collective well-being and justice. Rooted in empathy, solidarity often manifests in social, political, and humanitarian movements, where people join forces to address inequality, injustice, or shared causes.<br><br>
+
+                  Whether it's expressed in small communities, global initiatives, or within families and friendships, solidarity builds stronger connections, fosters collaboration, and creates a sense of belonging. It empowers individuals to feel supported and gives voice to those who may otherwise be unheard, highlighting the importance of cooperation and shared responsibility for a better future.</p>
             </article>
         </section>
       </main>
+      <script src="darkmode.js"></script>
 </body>
 </html>
