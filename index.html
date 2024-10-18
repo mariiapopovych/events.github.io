@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Center</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
     <link rel="stylesheet" href="styles/background.css">
+    <link rel="stylesheet" href="styles/mob-menu.css">
+    <link rel="stylesheet" href="styles/modal.css">
 </head>
 <body>
     <header class="site-header">
@@ -13,14 +15,41 @@
             <a href="index.html"><img src="./src/Bern/Logo/Logo + Wordmark2 Bern.png" alt="Bern Community Center Logo"></a>
         </div>
         <nav class="site-nav">
-            <ul>
+            <ul class="menu">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="classes.html">Classes & Events</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="">Get Involved</a></li>
+                <li><a href="#">Get Involved</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+    
+        <!-- MOBILE MENU BUTTON -->
+        <button class="menu-button-open" type="button" data-menu-open>Open</button>
+    
+        <!-- MOBILE MENU -->
+        <div class="mob-nav" data-menu>
+            <div class="mob-nav__container">
+                <button class="menu-button-close" type="button" data-menu-close>Close</button>
+                <ul class="mob-menu">
+                    <li class="mob-menu__item">
+                        <a class="mob-menu__link mob-menu__link--current" href="./index.html">Home</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a class="mob-menu__link" href="./classes.html">Classes & Events</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a class="mob-menu__link" href="./about">About</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a class="mob-menu__link" href="#">Get Involved</a>
+                    </li>
+                    <li class="mob-menu__item">
+                        <a class="mob-menu__link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <section id="home" class="homepage">
@@ -53,5 +82,8 @@
     </footer>
 
     <script src="index.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+
 </body>
 </html>
