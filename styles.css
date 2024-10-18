@@ -271,3 +271,7 @@ footer{
         transform: translateY(0);
     }
 }
+
+.event-item:hover{
+    background-color: #ff9f29;
+}
