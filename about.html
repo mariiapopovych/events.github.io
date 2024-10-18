@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="stylesheet" href="styles.css">
+    
 
     <style>
       *, *::after, *::before {
@@ -48,43 +49,79 @@
           height: 400px;
           width: 400px;
         }
-
+        .dark-mode {
+          background-color: rgb(25, 25, 25) !important;
+          color: white;
+      }
+      
+      .dark-mode1 {
+          background-color: rgb(65, 65, 65) !important;
+          color: white;
+      }
+      
+      .dark-mode2 {
+          background-color: rgb(45, 37, 37) !important;
+          color: white;
+      }
+      
+      #darkMode {
+          width: 50px;
+          height: 30px;
+          border-radius: 15px;
+          border-style: none;
+          background-color: rgb(189, 188, 188);
+      }
+      
+      #darkMode .icon1 {
+          width: 20px;
+          height: 20px;
+          background-color: black;
+      
+          border-radius: 25px;
+      }
+      
+      #darkMode:active .icon1 {
+          background-color: white;
+      }
     </style>
 </head>
 <body>
-      <header class="site-header">
-    <div class="logo">
+      <header class="site-header darkM1">
+    <div class="logo" class="darkM1">
         <a href="index.html"><img src="./src/Bern/Logo/Logo + Wordmark2 Bern.png" alt="Bern Community Center Logo"></a>
     </div>
-    <nav class="site-nav">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
+    <nav class="site-nav " class="darkM1">
+        <ul class="darkM1">
+            <li><a href="index.html" class="active darkM1">Home</a></li>
             <li><a href="classes.html">Classes & Events</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="">Get Involved</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <button id="darkMode" onclick="colorModeToggler()" class="btn-toggle">
+      <nav class="icon1"></nav>
+    </button>
       </header>
-      <main>
-        <header  class="about-header" >
+      <main   class="darkM2">
+        <header  class="about-header" class="darkM1">
             <img class="header-img" src="https://www.bern.ch/themen/freizeit-und-sport/veranstaltungen/grosse-events/baerner-faschnacht/@@images/bc4759df-5df1-47c5-bb8b-1ddbf80e7f00.jpeg" alt="bern">
         </header>
-        <section id="AboutUs">
+        <section id="AboutUs" class="darkM1">
             <article class="about-article">
                 <img class="article-image" src="https://www.cityofvancouver.us/wp-content/uploads/2024/03/east-concert-1024x580.jpg" alt="natur concert">
                 <p class="article-text">The Aur Natur Concert is a unique musical experience that celebrates the beauty of nature through harmonious compositions. This concert brings together natural sounds—like the rustling of leaves, birdsong, flowing water, and the hum of wind—with instrumental music to create an immersive atmosphere that evokes serenity and a deep connection to the environment <br><br>
 
                  The performance is designed to not only entertain but also raise awareness about the importance of nature preservation. The concert features various artists who blend classical and contemporary styles, creating a tranquil and inspiring auditory journey. Each piece of music is crafted to reflect the different moods and elements of the natural world, inviting the audience to relax, reflect, and appreciate the world around them.</p>
             </article>
-             <article class="about-article">
+             <article class="about-article" class="darkM1">
                 <p class="article-text">Hiking is an outdoor activity that involves walking in natural environments, typically on trails or paths through forests, mountains, or other scenic landscapes. It’s an excellent way to connect with nature, offering a combination of physical exercise and mental relaxation. Hikes can vary in difficulty, from easy, leisurely walks to challenging treks up steep mountains, making it accessible to people of all fitness levels.<br><br>
 
                   Beyond the physical benefits, such as improved cardiovascular health and muscle strength, hiking allows individuals to explore beautiful landscapes, experience wildlife, and enjoy peaceful solitude or shared moments with fellow hikers. It’s a popular activity for those seeking adventure, fresh air, and an escape from the busy pace of modern life.</p>
                 <img class="article-image" src="https://cdn.evbstatic.com/s3-build/fe/build/images/0b0a9c8e1b093fe621f93d17795b43ce-hiking.webp" alt="hiking event">
                 
             </article>
-            <article class="about-article">
+            <article class="about-article" class="darkM1">
                 <img class="article-image" src="https://assets.teenvogue.com/photos/65f04cba135f536756238763/16:9/w_2560%2Cc_limit/GettyImages-1505754859%2520(1).jpg" alt="colloberation">
                 <p class="article-text">Solidarity is the unity and mutual support among individuals or groups who share common interests, challenges, or goals. It represents a commitment to stand together, especially in difficult times, to advocate for collective well-being and justice. Rooted in empathy, solidarity often manifests in social, political, and humanitarian movements, where people join forces to address inequality, injustice, or shared causes.<br><br>
 
@@ -92,5 +129,6 @@
             </article>
         </section>
       </main>
+      <script src="darkmode.js"></script>
 </body>
 </html>
