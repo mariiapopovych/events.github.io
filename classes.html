@@ -7,15 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <style>
 
-      *,
-    *::before,
-    *::after {
-        box-sizing: inherit;
-    }
-
       .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         grid-gap: 20px;
         padding: 10px;
       }
@@ -24,6 +18,7 @@
         padding: 10px;
         background-color: #f9f9f9;
         position: relative;
+        max-width: 95%;
       }
       button {
         margin-top: 10px;
@@ -44,12 +39,27 @@
         color: white;
         border: none;
         cursor: pointer;
-
       }
 
       .read-more:hover {
         background-color: #FF8C00;
       }
+
+    h2 {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .filter-container {
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
     </style>
   </head>
@@ -70,11 +80,46 @@
       </nav>
   </header>
 
-    <h2>Our available events to join</h2>
+    <h2 id="events-title">Our available events to join</h2>
+    <div class="filter-container">
+      <label for="event-day">Day:</label>
+      <select id="event-day" name="event-day">
+        <option value="">Select Day</option>
+        <option value="Sunday">Sunday</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+      </select>&nbsp;&nbsp
+      <label for="event-time">Time:</label>
+      <select id="event-time" name="event-time">
+        <option value="">Select Time</option>
+        <option value="morning">Morning</option>
+        <option value="afternoon">Afternoon</option>
+        <option value="evening">Evening</option>
+        <option value="all_day">All Day</option>
+      </select>&nbsp;&nbsp
+      <button id="apply-filter">Apply</button>
+    </div>
 
     <main class="wrapper grid" id="eventsGrid"></main>
 
     <script src="index.js"></script>
+    <script>
+      const eventDaySelect = document.getElementById('event-day');
+      const eventTimeSelect = document.getElementById('event-time');
+      const applyFilterButton = document.getElementById('apply-filter');
+
+      applyFilterButton.addEventListener('click', () => {
+        const selectedDay = eventDaySelect.value;
+        const selectedTime = eventTimeSelect.value;
+        displayEvents(events, selectedDay, selectedTime);
+      });
+
+      displayEvents(events);
+    </script>
 
 
     <footer>
