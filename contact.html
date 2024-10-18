@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
+        *::placeholder {
+            font-family: 'Alexandria Bold', sans-serif;
+     
+        }
+
         #contact-page {
             margin-top: 100px;
             display: flex;
@@ -14,7 +19,90 @@
             align-items: center;
         }
 
-  
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: 'Alexandria Bold', sans-serif;
+            color: #333;
+            background: linear-gradient(135deg,  #FF9517, #B3FAFF);
+        }
+        
+        form {
+            margin: 2rem auto;
+            height: auto;
+            background: #fffef8;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        #form-id {
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        fieldset {
+            border: none;
+            margin-top: 10px;
+        }
+        
+        input {
+            height: 2.5rem;
+            width: 100%; 
+            max-width: 25rem; 
+            padding: 0.5rem 1rem; 
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #333;
+            background-color: #f9f9f9;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        button {
+            display: block;
+            width: 60%;
+            text-align: center;
+            margin: auto;
+            
+            padding: 0.5rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #333;
+            background-color: #B3FAFF;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #007bff; 
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+        
+        label {
+            display: block;
+            margin: 1rem 0 0.5rem; 
+            font-size: 1rem;
+            color: #333;
+        }
+
+        textarea {
+            width: 100%; 
+            max-width: 25rem;
+            padding: 0.5rem 1rem; 
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #333;
+            background-color: #f9f9f9;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+      
 
     </style>
 </head>
@@ -35,7 +123,9 @@
 </header>
     <section id="contact-page">
         <div>
+           
             <form method="post" action="" id="survey-form">
+                <h1 id="form-id"> Get in Contact!</h1>
                 <fieldset class="first" >
                   <label id="name-label" for="name">Name</label>
                   <input id="name" type="text"  placeholder="Enter your name" >
@@ -43,21 +133,12 @@
                   <input id="email" type="email"  placeholder="Enter your email" >
                   <label id="number-label" for="number">Tel</label>
                   <input id="number" type="number" pattern="[0-9]{10,13}" min="1000000000" max="9999999999999" placeholder="Enter your number"  >
-
-                </fieldset>
-                <fieldset class="third">
-                  <legend>Would you recommend this Community to a friend?</legend>
-                  <label>
-                  <input type="radio" name="recommend" value="1" checked > Definitely </label>
-                  <label>
-                  <input type="radio" name="recommend" value="2"  > No way! </label>
-                  <label>
-                  <input type="radio" name="recommend" value="3"  > I don't know  </label>
                 </fieldset>
                 <fieldset class="fifth">
                   <legend>Any comments or suggestions?</legend>
-                  <textarea id="textarea" type="textarea" rows="5" cols="50" placeholder="please write your text..."></textarea> 
+                  <textarea id="textarea" type="textarea" rows="10" cols="50" placeholder="please write your text..."></textarea> 
                 </fieldset>
+
                 <button id="submit" type="submit">Submit</button>
             </form>
         </div>

@@ -9,20 +9,24 @@ console.log(text)
 let button = document.getElementById("submit");
 console.log(button)
 
+
+
 button.addEventListener("click", function(e) {
     e.preventDefault()
 
-    if (userName.value.length === 0){
+    if (userName.value.length === 0) { 
         userName.style.border = "2px solid red";
-        alert("please fill correctly")
+        alert("please fill name correctly")
 
     } else if (!email.value.includes("@")) {
         email.style.border = "2px solid red";
-        alert("please fill correctly")
+        alert("please fill your email correctly")
+
     } else if (text.value.length === 0) {
         text.style.border = "2px solid red";
-        alert("please fill correctly")
+        alert("please fill you Number correctly")
     }
 
-
 })
+
+
